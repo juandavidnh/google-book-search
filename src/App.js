@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state ={
-      searchTerm: 'hugo',
+      searchTerm: '',
       printTypeSelected: 'all',
       bookTypeSelected: 'partial',
       books: [],
