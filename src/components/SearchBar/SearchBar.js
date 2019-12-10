@@ -12,8 +12,16 @@ class SearchBar extends React.Component{
     render(){
         return(
             <section className="SearchBar">
-                <SearchInput searchTerm={this.props.searchTerm} />
-                <FilterOptions printTypeList={this.props.printTypeList} bookTypeList={this.props.bookTypeList} />
+                <SearchInput 
+                    searchTerm={this.props.searchTerm} 
+                    changeSearchTerm={(term) => this.props.changeSearchTerm(term)}
+                    searchSubmit={(e) => this.props.searchSubmit(e)}
+                    />
+                <FilterOptions 
+                    printTypeSelected={this.props.printTypeSelected} 
+                    bookTypeSelected={this.props.bookTypeSelected} 
+                    changePrintType={(type) => this.props.changePrintType(type)} 
+                    changeBookType={(type) => this.props.changeBookType(type)}/>
             </section>
         )
     }

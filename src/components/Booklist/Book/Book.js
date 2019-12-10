@@ -3,19 +3,31 @@ import MoreInfo from './MoreInfo/MoreInfo';
 import './Book.css';
 
 class Book extends React.Component{
+    static defaultProps={
+        key: '',
+        title: '',
+        author: '',
+        price: '',
+        description: '',
+        image: '',
+        link: '',
+    }
+
     render(){
         return(
             <section className="Book">
-                <h2 className="book_title">Henry I</h2>
-                <section className="book_cover">
-                    <img src="" alt="" />
-                </section>
-                <section className="book_info">
-                    <p className="book_author">Author: C. Warren Hollister</p>
-                    <p className="book_price">Price: $50.00</p>
-                    <p className="book_description">The resulting book or whether the book is a free ebook or not.</p>
-                    <MoreInfo />
-                </section>
+                <h2 className="book_title">{this.props.title}</h2>
+                <div className="book_content">
+                    <section className="book_cover">
+                        <img src={this.props.image} alt="book-cover" />
+                    </section>
+                    <section className="book_info">
+                        <p className="book_author">Author: {this.props.author}</p>
+                        <p className="book_price">Price: {this.props.price}</p>
+                        <p className="book_description">{this.props.description}</p>
+                        <MoreInfo link={this.props.link}/>
+                    </section>
+                </div>
             </section>
         )
     }

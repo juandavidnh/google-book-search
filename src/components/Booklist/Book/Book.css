@@ -1,0 +1,27 @@
+.Book{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.book_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.book_cover{
+    flex-basis: 20%;
+}
+
+.book_info{
+    flex-basis: 70%;
+}
+
+.book_title{
+    flex-basis: 100%;
+    text-align: center;
+}
+
